@@ -21,7 +21,7 @@
 <body>
     <header class="main-header">
         <div class="">
-            <a href="#section1" class="toscroll"><img src="./img/logo_b1.png" alt="LOGO" class="img_logo logo"></a>
+            <a href="#section1" class="toscroll"><img src="./img/logo_b1.png" alt="LOGO" class="img_logo logo selectDisable"></a>
         </div>
 
         <input type="checkbox" class="menu-btn" id="menu-btn">
@@ -30,16 +30,16 @@
         </label>
 
         <ul class="nav_links">
-            <li class="nav_link">
+            <li class="nav_link selectDisable">
                 <a href="#section1" class="toscroll">Inicio</a>
             </li>
-            <li class="nav_link">
+            <li class="nav_link selectDisable">
                 <a href="#section2" class="toscroll">AED</a>
             </li>
-            <li class="nav_link">
+            <li class="nav_link selectDisable">
                 <a href="#section3" class="toscroll">Datos externos</a>
             </li>
-            <li class="nav_link">
+            <li class="nav_link selectDisable">
                 <a href="#section4" class="toscroll">Conclusiones</a>
             </li>
         </ul>
@@ -199,7 +199,7 @@
     $(document).ready(function () {
         $("a.toscroll").click(function (event) {
             event.preventDefault();
-            $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top - 160}, 500);
+            $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top - 160}, 100);
         });
     });
 </script>

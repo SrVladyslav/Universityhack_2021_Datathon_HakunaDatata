@@ -280,8 +280,8 @@ a {
 /** Animation **/
 @keyframes pulse {
     from {
-        box-shadow: 0 0 0 0px rgba(234, 67, 53, 0.6);
-        background: rgba(234, 67, 53, 0.6);
+        box-shadow: 0 0 0 0px rgba(30,57,138, 0.6);/*rgba(30,57,138,1);*/
+        background: rgba(30,57,138, 0.6);
     }
     to {
         box-shadow: 0 0 0 1000px rgba(234, 67, 53, 0);
@@ -396,12 +396,19 @@ a {
     background-color: #FAFAFA;
 }
 
+.center {
+    margin: auto!important;
+    align-items: center!important;
+    text-align: center!important;
+}
+
 /** Landing Page**/
 #section1 {
     position: relative;
     height: 100vh!important;
     width: 100%;
     background-color: #2E8DDC;
+    overflow: hidden;
     /*background-color: #1D3C7D; /*#023485;*/
     /*background: rgba(30,122,125,1);
     background: -moz-linear-gradient(top, rgba(30,122,125,1) 0%, rgba(29,59,125,1) 81%);
@@ -501,16 +508,16 @@ a {
     transition-duration: 0.3s;
     z-index: 500;
 
-    -webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
-    -moz-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
-    box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.3);
 }
 
 .next_button:hover {
     cursor: pointer;
-    -webkit-box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.3);
-    -moz-box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.3);
-    box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 2px 2px 8px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 2px 8px 2px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 8px 2px rgba(0,0,0,0.3);
     background-color: #FAFAFA;
     text-decoration: none;
     color: #1D3C7D;
@@ -629,6 +636,7 @@ a {
     align-items: center;
     align-content: center;
     justify-content: center;
+    margin: auto;
     height: 600px;
     width: 100%;
 }
@@ -637,20 +645,34 @@ a {
     position: relative;
     height: 450px;
     width: 90%;
-    background-color: gray;
+    background-color: white;
+    -webkit-box-shadow: 5px 6px 8px 5px rgba(0,0,0,0.10);
+    -moz-box-shadow: 5px 6px 8px 5px rgba(0,0,0,0.10);
+    box-shadow: 5px 6px 8px 5px rgba(0,0,0,0.10);
     border-radius: 7px;
     margin: auto;
+    flex-direction: column;
+    margin-bottom: 30px;
+    transition-duration: 0.8s;
 }
 
 .card .card_foto {
-    height: 250px;
-    width: 250px;
     position: relative;
-    top: 20px;
-    background-color: green;
+    height: 170px;
+    width: 170px;
+    position: relative;
+    top: 50px;
+    background-color: white;
     left: 50%;
     transform: translateX(-50%);
     z-index: 30;
+    border-radius: 50%;
+}
+
+.card .card_foto img {
+    position: relative;
+    overflow: auto;
+    width: 100%;
     border-radius: 50%;
 }
 
@@ -663,9 +685,36 @@ a {
     height: 1.5em;
     line-height: 1.5em;
     z-index: 50;
-    top: 40px;
+    top: 80px;
 }
 
+.card_linkedin {
+    margin: auto;
+    height: 30px;
+    width: 30px;
+}
+
+.card_linkedin {
+
+}
+
+.card_description {
+    position: relative;
+    font-size: 0.9em;
+    padding: 15px;
+    top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'pt_sansregular';
+
+}
+
+.card:hover {
+    -webkit-box-shadow: 5px 6px 9px 5px rgba(0,0,0,0.18);
+    -moz-box-shadow: 5px 6px 9px 5px rgba(0,0,0,0.18);
+    box-shadow: 5px 6px 9px 5px rgba(0,0,0,0.18);
+    transition-duration: 0.8s;
+}
 
 /** Footer **/
 .footer {

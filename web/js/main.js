@@ -2,6 +2,7 @@ const header = document.querySelector('.main-header')
 
 //header.classList.add('scrolled')
 
+// Header Listener
 window.addEventListener('scroll', () => {
     const scrollPos = window.scrollY
 
@@ -21,3 +22,27 @@ $(window).scroll(function() {
       "margin-top": ($(window).scrollTop()) + 500,
     });
   });
+
+
+// ANIMATIONS
+window.addEventListener('scroll', ()=> {
+    let screenPosition = window.innerHeight -150;
+
+
+
+    // Team Card Animation
+    let contentL = document.querySelector('.lisa')
+    let contentR = document.querySelector('.vlad')
+    let contentPosition = contentL.getBoundingClientRect().top
+    if(contentPosition < screenPosition){
+        contentL.classList.add('active')
+        setTimeout(()=> {
+            contentR.classList.add('active')
+        }, 50)
+    }else{
+        contentL.classList.remove('active')
+        setTimeout(()=> {
+            contentR.classList.remove('active')
+        }, 50)
+    }
+})

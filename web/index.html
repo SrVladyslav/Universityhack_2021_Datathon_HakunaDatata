@@ -161,17 +161,17 @@
             <div class="col-md-3">
                 <div class="card lisa">
                     <div class="card_foto">
-                        <img src="./img/team/lisa.jfif" alt="Lisa">
+                        <img src="./img/team/lisa.jfif" class="selectDisable" alt="Lisa">
                     </div>
                     <div class="card_nombre">
                         Lisa Gilyarovskaya
                     </div>
-                    <p class="card_description">
+                    <p class="card_description selectDisable">
                         Junior Data Scientist
                     </p>
                     <div class="card_linkedin">
                         <a href="https://www.linkedin.com/in/lisagilyarovskaya/">
-                            <img src="./img/icons/linkedin.svg" alt="Linkedin">
+                            <img src="./img/icons/linkedin.svg" class="selectDisable" alt="Linkedin">
                         </a>
                     </div>
                 </div>
@@ -179,17 +179,17 @@
             <div class="col-md-3">
                 <div class="card vlad">
                     <div class="card_foto">
-                        <img src="./img/team/vlad.jfif" alt="Vlad">
+                        <img src="./img/team/vlad.jfif" class="selectDisable" alt="Vlad">
                     </div>
                     <div class="card_nombre">
                         Vladyslav Mazurkevych
                     </div>
-                    <p class="card_description">
+                    <p class="card_description selectDisable">
                         Junior Data Scientist
                     </p>
                     <div class="card_linkedin">
                         <a href="https://www.linkedin.com/in/vladyslav-mazurkevych/">
-                            <img src="./img/icons/linkedin.svg" alt="Linkedin">
+                            <img src="./img/icons/linkedin.svg" class="selectDisable" alt="Linkedin">
                         </a>
                     </div>
                 </div>
@@ -200,11 +200,14 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <img src="./img/waves/footer1_2.svg" class="footer_wave selectDisable" alt="">
-        <img src="./img/waves/footer1.svg" style="position: absolute; bottom: 8em;" class="footer_wave selectDisable" alt="">
+        <!--<img src="./img/waves/footer1_2.svg" class="footer_wave selectDisable" alt="">-->
         <div class="footer_text">
             <p>Creado por Lisa & Vlad con amor ❤️</p>
-        </div>
+        
+
+        <img src="./img/waves/footer1.svg"  class="footer_wave selectDisable" alt="">
+    </div>
+    
     </footer>
 
     <!-- Scripts -->
@@ -217,13 +220,13 @@
     
     <script src="./js/gio_prop.js"></script>
     <script>
-    /*Scroll transition to anchor*/
-    $(document).ready(function () {
-        $("a.toscroll").click(function (event) {
-            event.preventDefault();
-            $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top - 160}, 100);
+        /*Scroll transition to anchor*/
+        $(document).ready(function () {
+            $("a.toscroll").click(function (event) {
+                event.preventDefault();
+                $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top - 160}, 100);
+            });
         });
-    });
-</script>
+    </script>
 </body>
 </html>

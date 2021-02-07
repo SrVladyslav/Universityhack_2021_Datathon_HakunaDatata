@@ -499,7 +499,7 @@ a {
     line-height: 55px;
     color: #1D3C7D;
     transition-duration: 0.3s;
-    z-index: 4;
+    z-index: 500;
 
     -webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
     -moz-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);

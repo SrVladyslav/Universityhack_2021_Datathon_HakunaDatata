@@ -581,13 +581,13 @@ main {
     }
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 450px) {
     .introduction {
         width: 100%;
-        margin-top: 20vh;
+        margin-top: 25vh;
     }
     .landing-photo img {
-        height: 20vh;
+        height: 200px;
         animation: start 1.8s ease;
         z-index: 50;
     }

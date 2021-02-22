@@ -581,6 +581,18 @@ main {
     }
 }
 
+@media screen and (max-width: 340px) {
+    .introduction {
+        width: 100%;
+        margin-top: 20vh;
+    }
+    .landing-photo img {
+        height: 20vh;
+        animation: start 1.8s ease;
+        z-index: 50;
+    }
+}
+
 /** Problema**/
 .section_problem {
     position: relative;

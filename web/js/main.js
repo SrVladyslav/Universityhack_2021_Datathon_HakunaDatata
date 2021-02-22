@@ -1,6 +1,19 @@
 const header = document.querySelector('.main-header')
 
 //header.classList.add('scrolled')
+// Init
+//////////////////////////////////////////////////
+const scrollPos = window.scrollY
+
+if(scrollPos > 100) {
+    header.classList.add('scrolled')
+    $(".img_logo").attr("src","./img/logo_n1.png") // Image from the Bar
+    
+} else {
+    header.classList.remove('scrolled')
+    $(".img_logo").attr("src","./img/logo_b1.png") // Image from the Bar
+}
+//////////////////////////////////////////////////
 
 // Header Listener
 window.addEventListener('scroll', () => {
@@ -27,7 +40,7 @@ $(window).scroll(function() {
 // ANIMATIONS
 window.addEventListener('scroll', ()=> {
     let screenPosition = window.innerHeight - 160;
-    let screenPositionFarm = window.innerHeight - 300;
+    let screenPositionEDA = window.innerHeight - 300;
 
 
     // Team Card Animation
@@ -46,8 +59,22 @@ window.addEventListener('scroll', ()=> {
         }, 50)
     }
 
+    // Eda FOG Activation
+    let eda = document.querySelector('#section2')
+    let conclusion = document.querySelector('#section4')
+    let body = document.querySelector('body')
+    let contentPositionEDA = eda.getBoundingClientRect().top
+    let contentPositionConclusion = conclusion.getBoundingClientRect().top
+   
+    if(contentPositionEDA < screenPositionEDA && screenPositionEDA <contentPositionConclusion){
+        body.classList.add('active_EDA')
+    }else{
+        body.classList.remove('active_EDA')
+    }
 
+    /*
     // Farm Animation
+    let screenPositionFarm = window.innerHeight - 300;
     let capa1 = document.querySelector('.img_top_stats')
     let capa2 = document.querySelector('.img_middle')
     let capa3 = document.querySelector('.img_middle_1')
@@ -72,7 +99,7 @@ window.addEventListener('scroll', ()=> {
                 b.classList.remove('oculto')
                 b.classList.add('visible')
             }
-        })*/
+        })
 
     }else{
         capa1.classList.remove('capa_abierta_1')
@@ -87,6 +114,7 @@ window.addEventListener('scroll', ()=> {
         document.querySelectorAll('.data_info_s').forEach((b)=> {
             b.classList.remove('visible')
             b.classList.add('oculto')
-        })*/
-    }
+        })
+    }*/
 })
+

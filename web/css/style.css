@@ -589,7 +589,7 @@ main {
     .landing-photo img {
         height: 150px;
         animation: start 1.8s ease;
-        z-index: 50;
+        z-index: 100;
     }
 }
 
@@ -682,6 +682,7 @@ main {
 /** Datos de Partida**/
 #section1_1{
     position: relative;
+    max-height: 100vh;
     margin-top: 0;
     background-color: rgba(46, 141, 220, 0.04);
 }

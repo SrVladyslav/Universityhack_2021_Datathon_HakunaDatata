@@ -584,10 +584,10 @@ main {
 @media screen and (max-width: 450px) {
     .introduction {
         width: 100%;
-        margin-top: 25vh;
+        margin-top: 20vh;
     }
     .landing-photo img {
-        height: 200px;
+        height: 150px;
         animation: start 1.8s ease;
         z-index: 50;
     }

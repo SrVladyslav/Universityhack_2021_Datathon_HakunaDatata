@@ -92,7 +92,7 @@
             <div class="section_problem">
                 <div class="container_problem">
                     <div class="container_circle text_problem">
-                        <p>
+                        <p id="text1">
                             Lorem ipsum dolor sit amet, consecteur adipiscing elit. Donec eu arcu est.
                         </p>
                     </div>
@@ -100,7 +100,7 @@
                         
                     </div>
                     <div class="container_circle text_problem">
-                        <p>
+                        <p id="text2">
                             Lorem ipsum dolor sit amet, consecteur adipiscing elit. Donec eu arcu est.
                         </p>
                     </div>
@@ -110,7 +110,7 @@
                 </div>
                 <div class="container_problem">
                     <svg class="svg">
-                        <line stroke-width="4px" stroke="#BDE0F8"  x1="30px" y1="60px" x2="90%" y2="180px" id="line1"/>
+                        <line stroke-width="4px" stroke="#FAFAFA"  x1="30px" y1="60px" x2="90%" y2="180px" id="line1"/>
                     </svg>
                     <div class="container_circle circle_left">
                         <div class="circle_problem" id="circle1">
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                     <svg class="svg">
-                        <line stroke-width="4px" stroke="#BDE0F8"  x1="90%" y1="180px" x2="30px" y2="300px" id="line2"/>
+                        <line stroke-width="4px" stroke="#FAFAFA"  x1="90%" y1="180px" x2="30px" y2="300px" id="line2"/>
                     </svg>
                     <div class="container_circle circle_right">
                         <div class="circle_problem" id="circle2">
@@ -130,18 +130,18 @@
                         </div>
                     </div>
                     <svg class="svg">
-                        <line stroke-width="4px" stroke="#BDE0F8"  x1="30px" y1="300px" x2="90%" y2="420" id="line3"/>
+                        <line stroke-width="4px" stroke="#FAFAFA"  x1="30px" y1="300px" x2="90%" y2="420" id="line3"/>
                     </svg>
-                    <div class="container_circle circle_left" id="circle3">
-                        <div class="circle_problem">
+                    <div class="container_circle circle_left">
+                        <div class="circle_problem" id="circle3">
                             <div class="circle_problem_in">
                                 <img src="./img/icons/shopping_car.png" alt="">
                             </div>
                         </div>
                     </div>
 
-                    <div class="container_circle circle_right" id="circle4">
-                        <div class="circle_problem">
+                    <div class="container_circle circle_right">
+                        <div class="circle_problem" id="circle4">
                             <div class="circle_problem_in">
                                 <img src="./img/icons/coronavirus.svg" alt="">
                             </div>
@@ -153,7 +153,7 @@
                         
                     </div>
                     <div class="container_circle text_problem">
-                        <p>
+                        <p id="text3">
                             Lorem ipsum dolor sit amet, consecteur adipiscing elit. Donec eu arcu est.
                         </p>
                     </div>
@@ -161,7 +161,7 @@
                         
                     </div>
                     <div class="container_circle text_problem">
-                        <p>
+                        <p id="text4">
                             Lorem ipsum dolor sit amet, consecteur adipiscing elit. Donec eu arcu est.
                         </p>
                     </div>
@@ -175,26 +175,53 @@
     <section class="section_title" id="section1_1">
         <p>Datos de partida </p>
     </section>
+    <!-- DASHBOARD 1-->
     <section class="section_container" id="section1_2">
         <div class="dashboard">
             <div class="dashboard_col">
-                <div class="dashboard_card">
+                <div class="dashboard_card dash_show" id="dash_card_1">
                     abc
                 </div>
-                <div class="dashboard_card">
-                    abc
-                </div>
-            </div> 
-            <div class="dashboard_col">
-                <div class="dashboard_card">
+                <div class="dashboard_card dash_show" id="dash_card_2">
                     abc
                 </div>
             </div> 
             <div class="dashboard_col">
-                <div class="dashboard_card">
+                <div class="dashboard_card dash_show" id="dash_card_3">
                     abc
                 </div>
-                <div class="dashboard_card">
+            </div> 
+            <div class="dashboard_col">
+                <div class="dashboard_card dash_show" id="dash_card_4">
+                    abc
+                </div>
+                <div class="dashboard_card dash_show" id="dash_card_5">
+                    abc
+                </div>
+            </div> 
+        </div>
+    </section>
+    <!-- DASHBOARD 2-->
+    <section class="section_container" id="section1_2_1">
+        <div class="dashboard">
+            <div class="dashboard_col">
+                <div class="dashboard_card" id="dash_card_6">
+                    abc
+                </div>
+                <div class="dashboard_card" id="dash_card_7">
+                    abc
+                </div>
+            </div> 
+            <div class="dashboard_col">
+                <div class="dashboard_card" id="dash_card_8">
+                    abc
+                </div>
+            </div> 
+            <div class="dashboard_col">
+                <div class="dashboard_card" id="dash_card_9">
+                    abc
+                </div>
+                <div class="dashboard_card" id="dash_card_10">
                     abc
                 </div>
             </div> 
@@ -204,20 +231,20 @@
         <div class="dashboard">
             <div class="dashboard_col"></div> 
             <div class="dashboard_row">
-                <div class="dashboard_card dashboard_btn dash_btn_active">
+                <div class="dashboard_card_btn dashboard_btn dash_btn_active" id="dash_btn_1" onclick="change_dashboard(0);">
                     DS 1
                 </div>
-                <div class="dashboard_card dashboard_btn">
-                    DS 1
+                <div class="dashboard_card_btn dashboard_btn" id="dash_btn_2" onclick="change_dashboard(1);">
+                    DS 2
                 </div>
-                <div class="dashboard_card dashboard_btn">
-                    DS 1
+                <div class="dashboard_card_btn dashboard_btn" id="dash_btn_3" onclick="change_dashboard(2);">
+                    DS 3
                 </div>
-                <div class="dashboard_card dashboard_btn">
-                    DS 1
+                <div class="dashboard_card_btn dashboard_btn" id="dash_btn_4" onclick="change_dashboard(3);">
+                    DS 4
                 </div>
-                <div class="dashboard_card dashboard_btn">
-                    DS 1
+                <div class="dashboard_card_btn dashboard_btn" id="dash_btn_5" onclick="change_dashboard(4);">
+                    DS 5
                 </div>
             </div> 
             <div class="dashboard_col"></div> 

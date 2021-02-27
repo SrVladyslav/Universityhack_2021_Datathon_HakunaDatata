@@ -582,6 +582,14 @@ main {
     }
 }
 
+@media screen and (max-width: 768px){
+    .section_text {
+        position: relative;
+        height: 100%;
+        width: 96%; 
+    }
+}
+
 @media screen and (max-width: 450px) {
     .introduction {
         width: 100%;
@@ -591,6 +599,12 @@ main {
         height: 150px;
         animation: start 1.8s ease;
         z-index: 100;
+    }
+
+    .section_text {
+        position: relative;
+        height: 100%;
+        width: 98%; 
     }
 }
 

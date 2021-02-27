@@ -177,7 +177,6 @@ function change_dashboard(dashboard) {
         dataset1.classList.add('dash_show')
         console.log('SHOW'+dataset1)
     })
-    
     // Borrar todo y volver a mostrar la nueva parte
 
 }

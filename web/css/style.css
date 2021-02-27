@@ -402,6 +402,7 @@ main {
 }
 
 .section_text {
+    position: relative;
     height: 100%;
     width: 60%; 
     padding: 15px;
@@ -834,6 +835,8 @@ main {
 
 .dashboard_card {
     display: none;
+    transform: scale(0);
+    transition-duration: 0.5s;
 }
 
 .dashboard_card:hover {
@@ -845,10 +848,11 @@ main {
 
 /** Dashboard Activo**/
 .dash_show {
-    display: flex;
-    transition-delay: 0.4s;
-    transition-duration: 0.4s;
+    display: flex!important;
+    transition-delay: 1.7s;
+    transition-duration: 1.7s;
     transform: scale(1);
+    opacity: 1;
 }
 
 @media screen and (max-width: 1024px) {
@@ -918,6 +922,7 @@ main {
 }
 
 .section4 {
+    position: relative;
     height: 10em;
     width: 100%;
 }
@@ -1068,6 +1073,7 @@ main {
 
 /** Equipo**/
 #section5 {
+    position: relative;
 }
 
 .section5 {
@@ -1076,7 +1082,7 @@ main {
     align-content: center;
     justify-content: center;
     margin: auto;
-    height: 600px;
+    height: 100%;
     width: 100%;
 }
 

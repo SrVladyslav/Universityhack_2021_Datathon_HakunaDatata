@@ -35,7 +35,15 @@ let dash_card_3 = document.querySelector('#dash_card_3')
 let dash_card_4 = document.querySelector('#dash_card_4')
 let dash_card_5 = document.querySelector('#dash_card_5')
 let dset1_cards = [dash_card_1, dash_card_2, dash_card_3, dash_card_4, dash_card_5]
+// Cartillas del segundo dataset
+let dash_card_6 = document.querySelector('#dash_card_6')
+let dash_card_7 = document.querySelector('#dash_card_7')
+let dash_card_8 = document.querySelector('#dash_card_8')
+let dash_card_9 = document.querySelector('#dash_card_9')
+let dash_card_10 = document.querySelector('#dash_card_10')
+let dset2_cards = [dash_card_6, dash_card_7, dash_card_8, dash_card_9, dash_card_10]
 
+let dashboard_ds = [dset1_cards,dset2_cards]
 reload()
 
 
@@ -156,13 +164,20 @@ function change_dashboard(dashboard) {
     // activo el boton que toca
     dash_buttons[dashboard].classList.add('dash_btn_active')
 
-    dset1_cards[0].classList.remove('dash_show')
     // efecto del cambio
-    for(let i=0; i < dset1_cards.length; i++) {
-        console.log(i)
-        dset1_cards[i].classList.add('dash_show')
+    for(let i=0; i < dashboard_ds.length; i++) {
+        dashboard_ds[i].forEach((dataset) => {
+            dataset.classList.remove('dash_show')
+            console.log('removiendo')
+        })  
     }
-
+    // Activo solo el dataset pulsado
+    console.log(dashboard)
+    dashboard_ds[dashboard].forEach((dataset1) => {
+        dataset1.classList.add('dash_show')
+        console.log('SHOW'+dataset1)
+    })
+    
     // Borrar todo y volver a mostrar la nueva parte
 
 }

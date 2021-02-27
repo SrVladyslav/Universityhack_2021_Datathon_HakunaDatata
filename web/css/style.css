@@ -222,9 +222,9 @@ main {
         align-items: center;
         padding: 10rem 0;
         width: 100vw;
-        height: 80vh;
-        line-height: 1.5rem;
-        font-size: 1.5rem;
+        height: 100vh;
+        line-height: 1.2rem;
+        font-size: 1.2rem;
         color: white;
         background: rgba(0, 0, 0, 0.9);
 
@@ -591,9 +591,13 @@ main {
 }
 
 @media screen and (max-width: 450px) {
+    #section1 {
+        height: 90vh;
+    }
     .introduction {
         width: 100%;
         margin-top: 20vh;
+        height: 30em;
     }
     .landing-photo img {
         height: 150px;

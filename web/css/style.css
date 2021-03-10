@@ -1,15 +1,13 @@
 @font-face {
     font-family: 'pt_sansbold';
-    src: url('./../fonts/ptsans-bold-webfont.woff2') format('woff2'),
-         url('./../fonts/ptsans-bold-webfont.woff') format('woff');
+    src: url('./../fonts/Montserrat-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'pt_sansregular';
-    src: url('./../fonts/ptsans-regular-webfont.woff2') format('woff2'),
-         url('./../fonts/ptsans-regular-webfont.woff') format('woff');
+    src: url('./../fonts/Montserrat-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -454,8 +452,8 @@ main {
 }
 
 .intro-text h1 {
-    font-size: 80px;
-    font-weight: 200px;
+    font-size: 70px;
+    font-weight: 100px;
     color: white;
     font-family: 'pt_sansbold';
 }
@@ -671,8 +669,8 @@ main {
 }
 
 .circle_problem_in img {
-    height: 30px;
-    width: 30px;
+    height: 48px;
+    width: 48px;
 }
 
 .text_problem {

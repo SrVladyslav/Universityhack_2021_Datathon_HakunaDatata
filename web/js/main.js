@@ -71,11 +71,11 @@ function reload() {
     const scrollPos = window.scrollY
     if(scrollPos > 100) {
         header.classList.add('scrolled')
-        $(".img_logo").attr("src","./img/logo_n1.png") // Image from the Bar
+        $(".img_logo").attr("src","./img/logo_blue.svg") // Image from the Bar
         
     } else {
         header.classList.remove('scrolled')
-        $(".img_logo").attr("src","./img/logo_b1.png") // Image from the Bar
+        $(".img_logo").attr("src","./img/logo_white.svg") // Image from the Bar
         
         // Reset de las bolitas
         line1.classList.remove('active_line1')

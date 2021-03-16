@@ -1,6 +1,10 @@
 // ###################### Relación Precio-Volumen de frutas y hortalizas #####################
-Plotly.d3.csv('./datasets/export_plot_1.csv', function (err, data) {
+Plotly.d3.csv(undefined , function (err, a) {
   var lookup = {};
+  
+  // Defines como dato el dataset generado
+  data = plo1
+
   function getData(time, product) {
     var byYear, trace;
     if (!(byYear = lookup[time])) {;
@@ -123,6 +127,7 @@ Plotly.d3.csv('./datasets/export_plot_1.csv', function (err, data) {
       steps: sliderSteps
     }]
   };
+  // Sustiye en el ID del HTML plot1
   Plotly.newPlot('plot1', {
     data: traces,
     layout: layout,

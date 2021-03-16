@@ -410,6 +410,14 @@ main {
     background-color: transparent; /*#FAFAFA;*/
 }
 
+.plot {
+    height: 100%;
+    width: 75%;
+    text-align: center;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
 .center {
     margin: auto!important;
     align-items: center!important;

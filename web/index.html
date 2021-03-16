@@ -10,11 +10,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     
-    <!-- Gio -->
+    <!-- Plotly y Jquery -->
     <script src="js/jquery.min.js"></script>
     <script src="./js/three.min.js"></script>
-    
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="./js/plotly-latest.min.js"></script>
+
+    <!-- DATA-->
+    <script src="./js/plotly_plot.js"></script>
 
     <!-- General Styles -->
     <link rel="stylesheet" href="./css/style.css">
@@ -76,23 +79,22 @@
 
     <!-- PROBLEMA -->
     <section class="section_title" id="section">
-        <p>¿Problema?</p>
+        <p>Introducción</p>
     </section>
     <section class="section_container">
         <div class="section_text">
             <p>
-            Debido a los problemas actuales ocasionados por el COVID-19, la 
-            economía mundial empezó a tener problemas, por esta razón se nos ha 
-            propuesto hacer un estudio sobre el impacto ocasionado del virus en
-            el comportamiento del mercado español de frutas y hortalizas
-            
+                No es ninguna novedad que el 2020 ha sido un año inesperado en todos los sectores y 
+                comercios nacionales e internacionales y, por ello, la agricultura no es ninguna 
+                excepción, pero, ¿en qué medida se ha visto afectado el comercio interior y exterior 
+                de frutas y hortalizas español a raíz de la pandemia? 
             </p>
 
             <div class="section_problem">
                 <div class="container_problem">
                     <div class="container_circle text_problem">
                         <p id="text1">
-                            Lorem ipsum dolor sit amet, consecteur adipiscing elit. Donec eu arcu est.
+                            ¿Tuvo algún efecto en la economía?
                         </p>
                     </div>
                     <div class="container_circle text_problem">
@@ -100,12 +102,10 @@
                     </div>
                     <div class="container_circle text_problem">
                         <p id="text2">
-                            Lorem ipsum dolor sit amet, consecteur adipiscing elit. Donec eu arcu est.
+                            ¿Y al comercio interior y exterior?
                         </p>
                     </div>
-                    <div class="container_circle text_problem">
-                        
-                    </div>
+                    <div class="container_circle text_problem"></div>
                 </div>
                 <div class="container_problem">
                     <svg class="svg">
@@ -153,7 +153,7 @@
                     </div>
                     <div class="container_circle text_problem">
                         <p id="text3">
-                            Lorem ipsum dolor sit amet, consecteur adipiscing elit. Donec eu arcu est.
+                            ¿Afectó al cultivo?
                         </p>
                     </div>
                     <div class="container_circle text_problem">
@@ -161,7 +161,7 @@
                     </div>
                     <div class="container_circle text_problem">
                         <p id="text4">
-                            Lorem ipsum dolor sit amet, consecteur adipiscing elit. Donec eu arcu est.
+                            ¿Han sido negativos estos efectos?
                         </p>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
     <!-- Datos de partida -->
     <img src="./img/waves/data_up.svg" alt="" class="section1_wave">
     <section class="section_title" id="section1_1">
-        <p>Datos de partida </p>
+        <p>Datos utilizados </p>
     </section>
     <!-- DASHBOARD 1-->
     <section class="section_container" id="section1_2">
@@ -180,7 +180,16 @@
             <div class="dashboard_col">
                 <!--Dataset 1-->
                 <div class="dashboard_card dash_show" id="dash_card_1">
-                    abc
+                    <div><b><h1>Dataset 1</h1></b></div>
+                    <div><h5 style="font-size: 0.8em; margin: 10px;">Consumo alimentario en España, información proveniente del MAPA.</h5></div>
+                    <div style="font-size: 0.8em; margin: 30px;text-align: left;">
+→ Cantidad (miles de Unidades) <br>
+→ Valor (miles de Euros)<br>
+→ Precio medio<br>
+→ Penetración (porcentajes de hogares que compran ese producto)<br>
+→ Cantidad per cápita <br>
+→ Gasto per cápita<br>
+                    </div>
                 </div>
                 <div class="dashboard_card dash_show" id="dash_card_2">
                     abc
@@ -267,6 +276,34 @@
         </div>
     </section>
 
+    <section class="section_container">
+        <div class="plot">
+            <div id="plot1" style="width:100%;height:auto;"></div>
+        </div>
+    </section>
+    <section class="section_container section2">
+        <div class="section_text">
+            Debido a los problemas actuales ocasionados por el COVID-19, la 
+            economía mundial empezó a tener problemas, por esta razón se nos ha 
+            propuesto hacer un estudio sobre el impacto ocasionado del virus en
+            el comportamiento del mercado español de frutas y hortalizas
+            
+            Para empezar se nos habían propuesto 5 Datasets para estudiarlos, 
+            además se nos permitió utilizar datos de otras fuentes. A continuación 
+            presentamos los resultados obtenidos de cada cosa:
+
+        </div>
+    </section>
+
+
+
+
+
+    <section class="section_container">
+        <div class="plot">
+            <div id="plot2" style="width:100%;height:auto;"></div>
+        </div>
+    </section>
 
 
      <!-- Conclusión -->
@@ -353,7 +390,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="./js/plotly_data.js"></script>
+    <script src="./js/plotly_plots.js"></script>
     <!-- Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>

@@ -24,26 +24,29 @@ let body = document.querySelector('body')
 
 let dash_btn_1 = document.querySelector('#dash_btn_1')
 let dash_btn_2 = document.querySelector('#dash_btn_2')
-let dash_btn_3 = document.querySelector('#dash_btn_3')
-let dash_btn_4 = document.querySelector('#dash_btn_4')
-let dash_btn_5 = document.querySelector('#dash_btn_5')
-let dash_buttons = [dash_btn_1, dash_btn_2, dash_btn_3, dash_btn_4, dash_btn_5]
+let dash_buttons = [dash_btn_1, dash_btn_2]
 // Cartillas del primer dataset
 let dash_card_1 = document.querySelector('#dash_card_1')
 let dash_card_2 = document.querySelector('#dash_card_2')
 let dash_card_3 = document.querySelector('#dash_card_3')
+let dset1_cards = [dash_card_1, dash_card_2, dash_card_3]
+// Cartillas del segundo dataset
 let dash_card_4 = document.querySelector('#dash_card_4')
 let dash_card_5 = document.querySelector('#dash_card_5')
-let dset1_cards = [dash_card_1, dash_card_2, dash_card_3, dash_card_4, dash_card_5]
-// Cartillas del segundo dataset
 let dash_card_6 = document.querySelector('#dash_card_6')
-let dash_card_7 = document.querySelector('#dash_card_7')
-let dash_card_8 = document.querySelector('#dash_card_8')
-let dash_card_9 = document.querySelector('#dash_card_9')
-let dash_card_10 = document.querySelector('#dash_card_10')
-let dset2_cards = [dash_card_6, dash_card_7, dash_card_8, dash_card_9, dash_card_10]
+let dset2_cards = [dash_card_4, dash_card_5, dash_card_6]
 
 let dashboard_ds = [dset1_cards,dset2_cards]
+
+// botones relacion volumen y consumo
+let hortalizas_btn = document.querySelector('#hortalizas_btn')
+let frutas_btn = document.querySelector('#frutas_btn')
+let hortalizas_d = document.querySelector('#hortalizas_plot')
+let frutas_d = document.querySelector('#frutas_plot')
+frutas_d.classList.add('hide')
+
+let more = document.querySelector('#more_btn')
+let more_plots = document.querySelector('#more_plots')
 reload()
 
 
@@ -158,9 +161,6 @@ function change_dashboard(dashboard) {
     // Reinicio todos los botones
     dash_btn_1.classList.remove('dash_btn_active')
     dash_btn_2.classList.remove('dash_btn_active')
-    dash_btn_3.classList.remove('dash_btn_active')
-    dash_btn_4.classList.remove('dash_btn_active')
-    dash_btn_5.classList.remove('dash_btn_active')
     // activo el boton que toca
     dash_buttons[dashboard].classList.add('dash_btn_active')
 
@@ -178,5 +178,33 @@ function change_dashboard(dashboard) {
         console.log('SHOW'+dataset1)
     })
     // Borrar todo y volver a mostrar la nueva parte
+}
 
+/////////////////////////////////////////////////////////
+// Botones relacion entre el volumen y consumo
+/////////////////////////////////////////////////////////
+function change_corr(btn_1) {
+    // Reinicio todos los botones
+    hortalizas_btn.classList.remove('dash_btn_active_d')
+    frutas_btn.classList.remove('dash_btn_active_d')
+    hortalizas_d.classList.remove('hide')
+    frutas_d.classList.remove('hide')
+    // activo el boton que toca
+    if(btn_1 == 1){
+        frutas_btn.classList.add('dash_btn_active_d')
+        hortalizas_d.classList.add('hide')
+    }else {
+        hortalizas_btn.classList.add('dash_btn_active_d')
+        frutas_d.classList.add('hide')
+    }
+}
+
+/////////////////////////////////////////////////////////
+// Boton ver mas
+/////////////////////////////////////////////////////////
+function see_more() {
+    // Reinicio todos los botones
+    console.log('Hola')
+    more_plots.classList.remove('hide')
+    more.classList.add('hide')
 }

@@ -16,14 +16,21 @@
     <!-- Plotly y Jquery -->
     <script src="js/jquery.min.js"></script>
     <script src="./js/three.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="./js/plotly-latest.min.js"></script>
 
     <!-- Importando datos-->
+    <script src="./spagne.js"></script>
     <script src="./js/datasets/relacion_precio_volume_plot1.js"></script>
+    <script src="./js/datasets/tracesCitricosEstacionalidad.js"></script>
+    <script src="./js/datasets/tracesHuesoEstacionalidad.js"></script>
+    <script src="./js/datasets/stlDescomposeCitricos.js"></script>
+    <script src="./js/datasets/stlDescomposeHueso.js"></script>
+    <script src="./js/datasets/FrutasVSHortalizasExportsEU.js"></script>
 
     <!-- General Styles -->
     <link rel="stylesheet" href="./css/style.css">
+
+
 </head>
 <body>
     <header class="main-header">
@@ -44,10 +51,10 @@
                 <a href="#section2" class="toscroll">AED</a>
             </li>
             <li class="nav_link selectDisable">
-                <a href="#section3" class="toscroll">Datos externos</a>
+                <a href="#section3" class="toscroll">Conclusiones</a>
             </li>
             <li class="nav_link selectDisable">
-                <a href="#section4" class="toscroll">Conclusiones</a>
+                <a href="#section4" class="toscroll">Equipo</a>
             </li>
         </ul>
     </header>
@@ -60,12 +67,13 @@
                     <class class="intro-text">
                         <h1>Agro Análisis</h1>
                         <p>
-                            Análisis sobre el comportamiento del mercado español de frutas y hortalizas durante el perido de la pandemia entre 01/03/2020 y el 30/11/2020.
+                            Descubre con nosotros el impacto real del COVID-19 sobre la economía del mercado español
+                            de frutas y hortalizas.
                         </p>
                     </class>
                     <div class="cta">
                         <div class="next_button selectDisable toscroll" onclick="javascript:location.href='#section2'">
-                            Empezar!
+                            ¡Empecemos!
                         </div>
                     </div>
                 </div>  
@@ -74,7 +82,7 @@
                 <img src="./img/img_intro.svg" alt="Intro">
             </div>
             <img src="./img/waves/wave3.svg" class="landing_wave selectDisable" alt="">
-            <img src="./img/waves/wave2_1.svg" style="z-index: 1;bottom: 1px;" class="landing_wave selectDisable" alt="">
+            <img src="./img/waves/wave2_1.svg" style="z-index: 1;bottom: 0px;" class="landing_wave selectDisable" alt="">
         </section>
     </main>
 
@@ -173,7 +181,7 @@
     <!-- Datos de partida -->
     <img src="./img/waves/data_up.svg" alt="" class="section1_wave">
     <section class="section_title" id="section1_1">
-        <p>Datos utilizados </p>
+        <p>Datos relevantes </p>
     </section>
     <!-- DASHBOARD 1-->
     <section class="section_container" id="section1_2">
@@ -181,54 +189,105 @@
             <div class="dashboard_col">
                 <!--Dataset 1-->
                 <div class="dashboard_card dash_show" id="dash_card_1">
-                    <div><b><h1>Dataset 1</h1></b></div>
-                    <div><h5 style="font-size: 0.8em; margin: 10px;">Consumo alimentario en España, información proveniente del MAPA.</h5></div>
-                    <div style="font-size: 0.8em; margin: 30px;text-align: left;">
-→ Cantidad (miles de Unidades) <br>
-→ Valor (miles de Euros)<br>
-→ Precio medio<br>
-→ Penetración (porcentajes de hogares que compran ese producto)<br>
-→ Cantidad per cápita <br>
-→ Gasto per cápita<br>
+                    <div class="dashboard_card_pic">
+                        <img src="./img/naranja.svg" alt="Naranja" class="dc_pic">
                     </div>
-                </div>
-                <div class="dashboard_card dash_show" id="dash_card_2">
-                    abc
+                    <div class="dashboard_card_title">Datasets Cajamar</div>
+                    <div class="dashboard_card_body">Consumo alimentario en España, información por frutas y hortalizas proveniente del MAPA, 
+                        MercaMadrid y MercaBarcelona.
+                        <p>
+                            → Cantidad (miles de Unidades) <br>
+                            → Valor (miles de Euros)<br>
+                            → Precio medio<br>
+                            → Famílias de productos<br>
+                            → Penetración (porcentajes de hogares que compran ese producto)<br>
+                            → Cantidad per cápita <br>
+                            → Gasto per cápita<br>
+                        </p>
+                    </div>
                 </div>
 
                 <!--Dataset 2-->
-                <div class="dashboard_card" id="dash_card_6">
-                    def
+                <div class="dashboard_card" id="dash_card_4">
+                    <div class="dashboard_card_pic">
+                        <img src="./img/icons/shopping_car.svg" alt="Mercado" class="dc_pic">
+                    </div>
+                    <div class="dashboard_card_title">Noticias sobre el comercio Interior</div>
+                    <div class="dashboard_card_body">Revisando varios periódicos remontados hacia la fecha de la época del covid, encontramos que:
+                    <p>
+                        → La demanda de verduras, hortalizas y frutas se disparó hasta un 40% durante el confinamiento y luego empezó a caer con la desescalada. <br>
+                        → Famílias de productos <br>
+                    </p>
+                    </div>  
                 </div>
-                <div class="dashboard_card" id="dash_card_7">
-                    def
+            </div> 
+            <div class="dashboard_col">
+                <!--Dataset 1-->
+                <div class="dashboard_card dash_show" id="dash_card_2">
+                    <div class="dashboard_card_pic">
+                        <img src="./img/planta.svg" alt="FEPEX" class="dc_pic">
+                    </div>
+                    <div class="dashboard_card_title">Dataset de FEPEX</div>
+                    <div class="dashboard_card_body">Datos de exportaciones e importaciones de España de frutas y hortalizas a lo largo del 
+                    periodo comprendido entre el Enero del 2016 y el Diciembre del 2020</h5>
+                    <p>
+                        → Exporaciones (t) <br>
+                        → Exporaciones (€)<br>
+                        → Importaciones (t) <br>
+                        → Importaciones (€) <br>
+                        → Famílias de productos <br>
+                    </p>
+                    </div>
+                </div>
+                <!--Dataset 2-->
+                <div class="dashboard_card" id="dash_card_5">
+                    <div class="dashboard_card_pic">
+                        <img src="./img/icons/money.svg" alt="Comercio">
+                    </div>
+                    <div class="dashboard_card_title">Noticias sobre el comercio Exterior</div>
+                    <div class="dashboard_card_body">Datos de exportaciones e importaciones de España de frutas y hortalizas a lo largo del 
+                    periodo comprendido entre el Enero del 2016 y el Diciembre del 2020
+                    <p>
+                        → Exporaciones (t) <br>
+                        → Exporaciones (€)<br>
+                        → Importaciones (t) <br>
+                        → Importaciones (€) <br>
+                        → Famílias de productos <br>
+                    </p>
+                    </div>
                 </div>
             </div> 
             <div class="dashboard_col">
                 <!--Dataset 1-->
                 <div class="dashboard_card dash_show" id="dash_card_3">
-                    abc
-                </div>
-                <!--Dataset 2-->
-                <div class="dashboard_card" id="dash_card_8">
-                    abc
-                </div>
-            </div> 
-            <div class="dashboard_col">
-                <!--Dataset 1-->
-                <div class="dashboard_card dash_show" id="dash_card_4">
-                    abc
-                </div>
-                <div class="dashboard_card dash_show" id="dash_card_5">
-                    abc
+                    <div class="dashboard_card_pic">
+                        <img src="./img/icons/covid.svg" alt="" class="dc_pic">
+                    </div>
+                    <div class="dashboard_card_title">Dataset COVID</div>
+                    <div class="dashboard_card_body">Estadísticas internacionales (Dataset Cajamar) y nacionales (datosgob.es)
+                    <p>
+                            → Casos totales positivos de COVID en las CCAA y Provincias <br>
+                            → Datos diarios durante el año 2020<br>
+                    </p>
+                    </div>
                 </div>
 
                 <!--Dataset 2-->
-                <div class="dashboard_card" id="dash_card_9">
-                    def
-                </div>
-                <div class="dashboard_card" id="dash_card_10">
-                    def
+                <div class="dashboard_card" id="dash_card_6">
+                    <div class="dashboard_card_pic">
+                        <img src="./img/icons/coronavirus.svg" alt="" class="dc_pic">
+                    </div>
+                    <div class="dashboard_card_title">Noticias sobre el comercio Interior</div>
+                    <div class="dashboard_card_body">Datos de exportaciones e importaciones de España de frutas y hortalizas a lo largo del 
+                    periodo comprendido entre el Enero del 2016 y el Diciembre del 2020
+                    <p>
+                        → Exporaciones (t) <br>
+                        → Exporaciones (€)<br>
+                        → Importaciones (t) <br>
+                        → Importaciones (€) <br>
+                        → Famílias de productos <br>
+                    </p>
+                    </div>
                 </div>
             </div> 
         </div>
@@ -238,19 +297,10 @@
             <div class="dashboard_col"></div> 
             <div class="dashboard_row">
                 <div class="dashboard_card_btn dashboard_btn dash_btn_active" id="dash_btn_1" onclick="change_dashboard(0);">
-                    DS 1
+                    Datasets
                 </div>
                 <div class="dashboard_card_btn dashboard_btn" id="dash_btn_2" onclick="change_dashboard(1);">
-                    DS 2
-                </div>
-                <div class="dashboard_card_btn dashboard_btn" id="dash_btn_3" onclick="change_dashboard(2);">
-                    DS 3
-                </div>
-                <div class="dashboard_card_btn dashboard_btn" id="dash_btn_4" onclick="change_dashboard(3);">
-                    DS 4
-                </div>
-                <div class="dashboard_card_btn dashboard_btn" id="dash_btn_5" onclick="change_dashboard(4);">
-                    DS 5
+                    Noticias
                 </div>
             </div> 
             <div class="dashboard_col"></div> 
@@ -265,56 +315,362 @@
     </section>
     <section class="section_container section2">
         <div class="section_text">
-            Debido a los problemas actuales ocasionados por el COVID-19, la 
-            economía mundial empezó a tener problemas, por esta razón se nos ha 
-            propuesto hacer un estudio sobre el impacto ocasionado del virus en
-            el comportamiento del mercado español de frutas y hortalizas
-            
-            Para empezar se nos habían propuesto 5 Datasets para estudiarlos, 
-            además se nos permitió utilizar datos de otras fuentes. A continuación 
-            presentamos los resultados obtenidos de cada cosa:
+            El objetivo es realizar análisis del comportamiento del mercado español de frutas y hortalizas 
+            durante el periodo de la pandemia. Ante el limitado tiempo del que disponíamos, el estudio lo 
+            hemos realizado <b class="blue">a nivel global de hortalizas</b> y a nivel de dos familias de frutas: <b class="blue">las frutas 
+            cítricas</b> y <b class="blue">las frutas de hueso</b>, que son las que, en nuestra opinión, han tenido un comportamiento 
+            durante la pandemia interesante de analizar.
+        </div>
+        <div class="section_text">
+            No hay mejor manera de conocer los datasets que realizando un <b class="blue">EDA Visual</b>, el cual consiste en 
+            buscar ciertos patrones y relaciones posibles entre las variables disponibles en los datos. 
+        </div>
+        <div class="section_text">
+            Una buena herramienta para este fin es la matriz múltiple de scatter plots de las variables numericas de nuestros datasets.
+            Hemos relizado un estudio con dicha técnica sobre el <b class="blue">Dataset1. Datos de consumo alimentario MAPA por CCAA</b> para los
+            últimos tres años intentando ver algún posible cambio en las relaciones de estas variables. Después hacer el estudio sobre el dataset entero donde 
+            los resultados nos salieron homogéneos en cuanto a los años, decidimos hacer una primera partición por <b class="blue">las Hortalizas y las las Frutas</b>.
+        </div>
 
+        <div class="section_text">
+            A continuación mostramos la relación que más atención nos llamó, ya que se puede observar un cambio repentino en su forma. En el año 
+            2019 (como en los años anteriores), se ve una <b class="blue">correlación positiva lineal</b> entre las variables formando un grupo homogéneo, mientras 
+            en el año 2020 vemos <b class="blue">la aparición de un segundo cluster</b> bien diferenciado.  
+        </div>
+    </section>
+
+    <section class="section_container margin_top_2">
+        <div class="plot no-margin" id="hortalizas_plot">
+            <div id="plot_correlacion_hortalizas"></div>
+        </div>
+    </section>
+    <section class="section_container">
+        <div class="plot no-margin" id="frutas_plot">
+            <div id="plot_correlacion_frutas"></div>
+        </div>
+    </section>
+    <section class="section_container">
+        <div class="dashboard">
+            <div class="dashboard_col"></div> 
+            <div class="dashboard_row">
+                <div class="vol_con_btn selectDisable dash_btn_active_d" id="hortalizas_btn" onclick="change_corr(0);">
+                    Hortalizas
+                </div>
+                <div class="vol_con_btn selectDisable" id="frutas_btn" onclick="change_corr(1);">
+                    Frutas
+                </div>
+            </div> 
+            <div class="dashboard_col"></div> 
+        </div>
+    </section>
+
+    <section class="section_container margin_top_10 by_columns">
+        <div class="section_text">
+             Construimos tablas agrupadas por <b class="blue">productos y años</b> ordenados por
+            consumo per cápita y vimos que <b class="blue">el TOP 5 productos se mantiene constante a lo largo de los años</b>, lo mismo 
+            ocurre ordenándolos por volumen y precio. Dejamos en <i>Standby</i> la incógnita de los clusters formados en el 2020.
+        </div>
+        <div class="plot no-margin">
+            <div class="rowu rowu_header">TOP 5 productos del año 2018 ordenados por consumo per capita</div>
+            <div class="tables">
+                <div class="colu">
+                    <div class="rowu rowu_header">PRODUCTO</div>
+                    <div class="rowu">PATATAS FRESCAS</div>
+                    <div class="rowu">NARANJAS</div>
+                    <div class="rowu">TOMATES</div>
+                    <div class="rowu">PLATANOS</div>
+                    <div class="rowu">OTR.HORTALIZAS/VERD.</div>
+                </div>
+                <div class="colu">
+                    <div class="rowu rowu_header">VOLUMEN (t)</div>
+                    <div class="rowu">156231.386</div>
+                    <div class="rowu">129992.452</div>
+                    <div class="rowu">100855.435</div>
+                    <div class="rowu">89671.086</div>
+                    <div class="rowu">77045.348</div>
+                </div>
+                <div class="colu">
+                    <div class="rowu rowu_header">PRECIO (€)</div>
+                    <div class="rowu">0.777</div>
+                    <div class="rowu">1.061</div>
+                    <div class="rowu">1.646</div>
+                    <div class="rowu">1.598</div>
+                    <div class="rowu">2.181</div>
+                </div>
+                <div class="colu">
+                    <div class="rowu rowu_header">VALOR (miles de €)</div>
+                    <div class="rowu">12802.189</div>
+                    <div class="rowu">131044.167</div>
+                    <div class="rowu">161276.85</div>
+                    <div class="rowu">142089.632</div>
+                    <div class="rowu">161606.525</div>
+                </div>
+                <div class="colu">
+                    <div class="rowu rowu_header">PENETRACION (%)</div>
+                    <div class="rowu">63.026</div>
+                    <div class="rowu">48.562</div>
+                    <div class="rowu">75.39</div>
+                    <div class="rowu">75.594</div>
+                    <div class="rowu">74.403</div>
+                </div>
+                <div class="colu">
+                    <div class="rowu rowu_header">CONS.PER.CAPITA</div>
+                    <div class="rowu">1.72</div>
+                    <div class="rowu">1.496</div>
+                    <div class="rowu">1.04</div>
+                    <div class="rowu">0.997</div>
+                    <div class="rowu">0.827</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="section_container">
+        <div class="plot no-margin">
+            <div class="rowu rowu_header">TOP 5 productos del año 2019 ordenados por consumo per capita</div>
+            <div class="tables">
+                <div class="colu">
+                    <div class="rowu rowu_header">PRODUCTO</div>
+                    <div class="rowu">PATATAS FRESCAS</div>
+                    <div class="rowu">NARANJAS</div>
+                    <div class="rowu">TOMATES</div>
+                    <div class="rowu">PLATANOS</div>
+                    <div class="rowu">MANZANAS</div>
+                </div>
+                <div class="colu">
+                    <div class="rowu rowu_header">VOLUMEN (t)</div>
+                    <div class="rowu">156231.377</div>
+                    <div class="rowu">124988.601</div>
+                    <div class="rowu">102220.223</div>
+                    <div class="rowu">94502.811</div>
+                    <div class="rowu">73188.670</div>
+                </div>
+                <div class="colu">
+                    <div class="rowu rowu_header">PRECIO (€)</div>
+                    <div class="rowu">0.898</div>
+                    <div class="rowu">1.011</div>
+                    <div class="rowu">1.737</div>
+                    <div class="rowu">1.605</div>
+                    <div class="rowu">1.443</div>
+                </div>
+                <div class="colu">
+                    <div class="rowu rowu_header">VALOR (miles de €)</div>
+                    <div class="rowu">137733.833</div>
+                    <div class="rowu">119320.493</div>
+                    <div class="rowu">172792.390</div>
+                    <div class="rowu">151526.986</div>
+                    <div class="rowu">106367.233</div>
+                </div>
+                <div class="colu">
+                    <div class="rowu rowu_header">PENETRACION (%)</div>
+                    <div class="rowu">63.706</div>
+                    <div class="rowu">48.535</div>
+                    <div class="rowu">75.651</div>
+                    <div class="rowu">77.335</div>
+                    <div class="rowu">62.300</div>
+                </div>
+                <div class="colu">
+                    <div class="rowu rowu_header">CONS.PER.CAP. (€)</div>
+                    <div class="rowu">1.685</div>
+                    <div class="rowu">1.402</div>
+                    <div class="rowu">1.045</div>
+                    <div class="rowu">1.036</div>
+                    <div class="rowu">0.855</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_container">
+        <div class="plot no-margin">
+            <div class="rowu rowu_header">TOP 5 productos del año 2019 ordenados por consumo per capita</div>
+            <div class="tables">
+                <div class="colu">
+                    <div class="rowu rowu_header">PRODUCTO</div>
+                    <div class="rowu">PATATAS FRESCAS</div>
+                    <div class="rowu">NARANJAS</div>
+                    <div class="rowu">TOMATES</div>
+                    <div class="rowu">PLATANOS</div>
+                    <div class="rowu">OTR.HORTALIZAS/VERD.</div>
+                </div>
+                <div class="colu">
+                    <div class="rowu rowu_header">VOLUMEN (t)</div>
+                    <div class="rowu">138956.995</div>
+                    <div class="rowu">115183.505</div>
+                    <div class="rowu">87489.993</div>
+                    <div class="rowu">86025.657</div>
+                    <div class="rowu">93709.525</div>
+                </div>
+                <div class="colu">
+                    <div class="rowu rowu_header">PRECIO (€)</div>
+                    <div class="rowu">0.899</div>
+                    <div class="rowu">1.314</div>
+                    <div class="rowu">1.779</div>
+                    <div class="rowu">1.613</div>
+                    <div class="rowu">2.310</div>
+                </div>
+                <div class="colu">
+                    <div class="rowu rowu_header">VALOR (miles de €)</div>
+                    <div class="rowu">126279.699</div>
+                    <div class="rowu">132830.879</div>
+                    <div class="rowu">153261.100</div>
+                    <div class="rowu">137810.742</div>
+                    <div class="rowu">211371.037</div>
+                </div>
+                <div class="colu">
+                    <div class="rowu rowu_header">PENETRACION (%)</div>
+                    <div class="rowu">69.386</div>
+                    <div class="rowu">59.579</div>
+                    <div class="rowu">80.811</div>
+                    <div class="rowu">82.962</div>
+                    <div class="rowu">76.423</div>
+                </div>
+                <div class="colu">
+                    <div class="rowu rowu_header">CONS.PER.CAP. (€)</div>
+                    <div class="rowu">2.000</div>
+                    <div class="rowu">1.553</div>
+                    <div class="rowu">1.239</div>
+                    <div class="rowu">1.230</div>
+                    <div class="rowu">1.034</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_container margin_top_5 by_columns">
         <div class="plot">
+            <div class="section_text" style="margin: 0!important; width: 100%;align-items: center;">
+                El siguiente paso fue investigar <b class="blue">la relación Precio-Volumen de cada fruta y hortaliza</b> en el marco de tiempo entre el 2018 y el 2020:
+           </div>
             <div id="plot1" style="width:100%;height:auto;"></div>
         </div>
     </section>
     <section class="section_container section2">
         <div class="section_text">
-            Debido a los problemas actuales ocasionados por el COVID-19, la 
-            economía mundial empezó a tener problemas, por esta razón se nos ha 
-            propuesto hacer un estudio sobre el impacto ocasionado del virus en
-            el comportamiento del mercado español de frutas y hortalizas
-            
-            Para empezar se nos habían propuesto 5 Datasets para estudiarlos, 
-            además se nos permitió utilizar datos de otras fuentes. A continuación 
-            presentamos los resultados obtenidos de cada cosa:
-
+            Esta visualización dinámica de los datos nos ayudó a <b class="blue">detectar la anomaía en el comportamiento de los cítricos </b>a principios de 
+            la pandemia (Marzo y Abril del 2020), cuyo <b class="blue">consumo aumentó</b> considerablemente en volumen, lo cuál nos llamo la atención. ¿Podría tratarse de un momento de compras
+            debido a la creencia popular de que la <b class="blue">Vitamina C</b> ayuda a mejorar el sistema inmune? Pero <b class="blue">este cambio de demanda</b>, 
+            ¿también pudo haber pasado en los <b class="blue">paises que importan los cítricos españoles</b>?
+        </div>
+    </section>
+    <!--Frutas VS Hortalizas -->
+    <section class="section_container">
+        <div class="plot">
+            <div class="section_text" style="align-items: center; width: 86%; align-self: center;">
+                Antes de lanzarnos al estudio de las exportaciones de fruta hemos querido combrobar cual es el grupo que proporciona mayores ganáncias 
+                a España. Efectivamente vemos que <b class="blue">las exportaciones de frutas contribuyen con mas fuerza a la economía exterior española</b> y, por ello, a partir 
+                de ahora nuestro estudio lo acotaremos en las dos mayores familias de este grupo.
+            </div>
+            <div id="FrutasVSHortalizasExport" style="width:100%;height:auto;"></div>
+        </div>
+    </section>
+    <section class="section_container">
+        <div class="plot">
+            <div id="plot21" style="width:100%;height:auto;"></div>
+            <img src="./img/naranja.svg" alt="Naranja" id="naranja">
+        </div>
+    </section>
+    <!--Cítricos-->
+    <section class="section_container by_columns margin_top_5">
+        <div class="plot">
+            <div class="section_text" style="align-items: center; width: 100%;">
+                Una vez <b class="blue">extraida la serie temporal de cítricos</b> utilizando de esos datos vimos que la serie no era estacionaria, es decir, su media y/o 
+                variabilidad cambian en el tiempo. Además tenía <b class="blue">una estacionalidad muy marcada</b> y una tendencia polinómica donde se observaba 
+                <b class="blue">un incremento importante desde finales del 2019</b>.
+            </div>
+            <div id="stlCitricos" class="margin_top_2"  style="width:100%;height:100%;"></div>
+        </div>
+        <div class="plot">
+            <div class="section_text" style="align-items: center; width: 100%;">
+                Para intentar ver mejor <b class="blue">el patrón estacional</b> realizamos un plot por meses dentro de cada año y, efectivamente, se puede observar
+                que <b class="blue">se gana más dinero en las exportaciones de cítricos</b> en meses más frios. Confirmando nuestra hipótesis anterior, las 
+                exportaciones en euros de cítricos en 2020 están significativamente <b class="blue">por encima de los últimos 5 años</b> en todos los periodos, 
+                sobretodo en <b class="blue">Febrero2020- Abril2020</b>.
+            </div>
+            <div id="plotEstacionalidadCitricos" style="width:100%;height:auto;"></div>
+        </div>
+    </section>
+    
+    <section class="section_container">
+        <div class="plot">
+            <div class="section_text" style="align-items: center; width: 100%;">
+                Muchas veces es interesante <b class="blue">eliminar la componente estacional de una serie </b>para apreciar el estado subyacente de lo que estamos midiendo, 
+                suprimiendo el efecto que puedan tener cambios estacionales. En este caso, interesa saber si una subida en euros de exportaciones se debe a 
+                efectos meramente estacionales o si podría deberse al COVID-19. 
+            </div>
+            <div class="section_text" style="align-items: center; width: 100%;">
+                Tras destacionalizar la serie quitándole la componente estacional, observamos 
+                que ese aumento no se debía a efectos meramente estacionales y que <b class="blue">sí hubo relación entre el aumento de las ganancias en 
+                exportaciones de cítricos y la etapa de COVID</b>:
+            </div>
+            <div id="destacionalizadaCitricos" style="width:100%;height:auto;"></div>
         </div>
     </section>
 
-
-
-
-
+<!--F. HUESO-->
     <section class="section_container">
         <div class="plot">
-            <div id="plot2" style="width:100%;height:auto;"></div>
+            <div class="section_text" style="align-items: center; width: 100%;">
+                Se ha repetido el mismo estudio para la serie de expotaciones para las frutas de hueso, ya que según algunos informes recientes <b class="blue">es el segundo lider en 
+                las expotaciones españoles de frutas, después de los cítricos</b>. Adjuntamos a continuación las graficas del estudio en las que se muestran características
+                a la serie de cítcos a excepción de que <b class="blue">el patrón estacional es inverso, es decir, se obtienen mayores ganáncias en los meses de verano</b>.
+            </div>
+            <div id="stlHueso" style="width:100%;height:100%;"></div>
+        </div>
+    </section>
+    <section class="section_container by_columns">
+        <div id="more_btn" class="more_btn selectDisable" onclick="see_more();">
+            Mostrar más
+        </div>
+    </section>
+    <section class="section_container margin_top_2 by_columns hide" id="more_plots">
+        <div class="plot">
+            <div id="plotEstacionalidadHueso"></div>
+        </div>
+        <div class="plot no-margin-0">
+            <div id="destacionalizadaHueso"></div>
+        </div>
+    </section>
+
+     <!-- Futuras investigaciones -->
+     <section class="section_title margin_top_5" id="section3">
+        <p>Futuras investigaciones</p>
+    </section>
+    <section class="section_container">
+        <div class="section_text">
+            Al ser las exportaciones de <b class="blue">los cítricos una importante vertiente de la economía española</b>, sería interesante <b class="blue">crear modelos predectivos</b> para 
+            ajustarse a la demanda en un futuro. Las series temporales con una fuerte estacionalidad como la de los cítricos a menudo se pueden representar 
+            bien con modelos que descomponen la señal en estacionalidad y en una tendencia a largo plazo, lo cuál seria nuestro siguiente paso en el estudio. 
+            Por otro lado hicimos el mismo procedimiento para la serie de exportaciones de frutas de hueso y observamos una serie de características casi 
+            idénticas solo que con el patron estacional inverso. También se observa que <b class="blue">el 2020 ha sido el año con mayores ganancias en exportaciones totales
+            de esta familia de frutas con respecto a los años anteriores</b>. Sería importante saber modelar y predecir esta serie de tiempo ya que supone una 
+            gran parte de las exportaciones de fruta española seguida de los cítricos.
         </div>
     </section>
 
 
      <!-- Conclusión -->
-     <section class="section_title" id="section4">
-        <p>Conclusión</p>
+     <section class="section_title margin_top_5" id="section4">
+        <p>Resultados</p>
     </section>
     <section class="section_container">
         <div class="section_text">
-            Al final podriamos decir que los españoles somos muy 
-            españoles y mucho españoles, llevad mascarillas y sed felices!
+            Después de haber analizado los datasets dados, profundizado en la lectura de algunos informes relacionados, así como la búsqueda y el 
+            estudio de datasets externos, <b class="blue">los resultados destacados obtenidos</b> en el estudio son los siguientes:
+            <div class="lin_res margin_top_2">
+                <p>
+                    → Las ganancias en exportaciones de las frutas más importantes en el comercio exterior español, las cítricas y las de hueso, han aumentado 
+                    durante la pandemia y parece que esa tendencia se mantuvo todo el 2020.
+                </p> 
+                <p>
+                    → Los patrones de consumo, en general se han mantenido igual, la gente sigue comprando el mismo top5 de productos en volumenes parecidos los últimos 
+                    tres años. Sin embargo, da para investigar la agrupación de observaciones en la gráfica que relacionaba el volumen de los productos en un año 
+                    determinado con el consumo por cápita.
+                </p>
+                <p>
+                    → Los precios aumentaron durante la época de marzo 2020 -abril 2020, sin embargo el covid en un principio no ha afectado de forma negativa a la 
+                    economía del mercado español. Si
+                </p>
+            </div>
         </div>
     </section>
     <section class="section_container">
@@ -335,7 +691,7 @@
             y otro estudiante del Grado en Ingenieria Informática de la UPV.  
         </div>
     </section>
-    <section class="section_container">
+    <section class="section_container margin_top_2">
         <div class="row section5">
             <div class="col-md-3"></div>
             <div class="col-md-3">
@@ -367,7 +723,7 @@
                     <p class="card_description selectDisable">
                         Junior Data Scientist
                     </p>
-                    <div class="card_linkedin">
+                    <div class="card_linkedin" style="z-index: 9999;">
                         <a href="https://www.linkedin.com/in/vladyslav-mazurkevych/">
                             <img src="./img/icons/linkedin.svg" class="selectDisable" alt="Linkedin">
                         </a>
@@ -382,7 +738,7 @@
     <footer class="footer">
         <!--<img src="./img/waves/footer1_2.svg" class="footer_wave selectDisable" alt="">-->
         <div class="footer_text">
-            <p>Creado por Lisa & Vlad con amor ❤️</p>
+            <p>Hakuna Datata | 2021 ❤️</p>
         
 
         <img src="./img/waves/footer1.svg"  class="footer_wave selectDisable" alt="">
@@ -392,6 +748,11 @@
 
     <!-- Scripts -->
     <script src="./js/plotly_plots.js"></script>
+
+    <!-- Importando datos de plots-->
+    <script src="./js/datasets/consumo_per_capita.js"></script>
+    <script src="./js/datasets/correlacion_vol_cons.js"></script>
+
     <!-- Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>

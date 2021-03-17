@@ -33,6 +33,10 @@ a {
     text-decoration: none;
 }
 
+.blue {
+    color: #2E8DDC;
+}
+
 main {
     padding: 0;
     margin: 0;
@@ -45,11 +49,23 @@ main {
     padding: 0;
 }
 
+.hide {
+    display: none!important;
+    transform: scale(0.5);
+    transition-duration: 2s;
+}
+
 /** Header Bar **/
 .logo {
     height: 40px;
     width: auto;
     z-index: 999;
+}
+
+#plotEstacionalidadHueso, #destacionalizadaHueso {
+    align-self: center;
+    transform: scale(1);
+    transition-duration: 2s;
 }
 
 .main-header {
@@ -402,26 +418,111 @@ main {
 .section_text {
     position: relative;
     height: 100%;
-    width: 60%; 
+    width: 60%;
     padding: 15px;
     font-size: 0.9em;
-    text-align: justify;
+    text-align: center;
     font-family: 'pt_sansregular';
     background-color: transparent; /*#FAFAFA;*/
 }
 
-.plot {
+.plot-little {
     height: 100%;
     width: 75%;
     text-align: center;
+    margin: 0;
+}
+
+.conclusion {
+    width: 100%;
+    height: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 10px;
+    text-align: justify;
+}
+
+.margin_top_2 {
+    margin-top: 2em!important;
+}
+
+.margin_top_5 {
+    margin-top: 5em!important;
+}
+
+.margin_top_10 {
+    margin-top: 10em!important;
+}
+
+.plot {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
     margin-top: 5em;
     margin-bottom: 5em;
+    flex-direction: column;
+}
+
+.tables {
+    display: flex;
+    width: 100%;
+    height: auto;
+    font-size: 0.9em;
+    background-color: white;
+    flex-direction: row;
+    background-color: #191820;
+}
+
+.by_columns {
+    display: flex;
+    flex-direction: column!important;
+    align-items: center;
+}
+
+.by_rows {
+    flex-direction: row;
+}
+
+.colu {
+    height: 100%;
+    width: auto;
+    flex: 1;
+    flex-direction: column;
+}
+.rowu {
+    width: 100%;
+    line-height: 2em;
+    height: 2em;
+    font-size: 0.8em;
+    background-color: #191820;
+    border: 1px solid #1d1d1d;
+}
+
+.rowu_header {
+    background-color: #1D3C7D;
+    height: 2em;
+    line-height: 2em
 }
 
 .center {
     margin: auto!important;
     align-items: center!important;
     text-align: center!important;
+}
+
+.no-margin-0 {
+    margin: 0px;
+}
+
+.no-margin {
+    margin: 15px;
+}
+
+.no-margin-1 {
+    margin: 20px;
 }
 
 /** Landing Page**/
@@ -448,14 +549,13 @@ main {
     margin: auto;
     align-items: center;
     justify-content: center;
-    /*margin-left: 200px;*/
     flex: 1;
     z-index: 50;
 }
 
 .presentation {
     left: 100px;
-    width: 80%;
+    width: 85%;
     position: relative;
 }
 
@@ -511,7 +611,7 @@ main {
     flex: 1;
 }
 .landing-photo img {
-    height: 60vh;
+    height: 55vh;
     animation: start 1.8s ease;
     z-index: 50;
 }
@@ -558,7 +658,7 @@ main {
         font-size: 30px;
     }
     .intro-text p {
-        font-size: 0.8em;
+        font-size: 0.9em;
         width: 100%;
         margin: 20px 0px 0px 0px;
     }
@@ -589,10 +689,30 @@ main {
 }
 
 @media screen and (max-width: 768px){
+    .section_title {
+        font-size: 1.1em;
+    }
     .section_text {
         position: relative;
         height: 100%;
         width: 96%; 
+        text-align: justify;
+        font-size: 0.7em;
+    }
+    .tables {
+        flex-direction: row;
+    }
+    .plot {
+        width: 98%;
+        height: auto;
+    }
+    .rowu {
+        font-size: 0.5em;
+        height: auto;
+    }
+    .naranja {
+        width: 50%;
+        height: auto;
     }
 }
 
@@ -807,6 +927,7 @@ main {
     align-items: center;
     flex: 1;
     width: 100%;
+    height: 100%;
 }
 
 .dashboard_row {
@@ -831,7 +952,69 @@ main {
 
 .dash_btn_active {
     background-color: #2E8DDC!important;
-    color: white;
+    color: black;
+}
+
+.vol_con_btn {
+    background-color: #B2BABB;
+    color: black;
+    width: 93%;
+    height: 50px;
+    -webkit-box-shadow: 5px 6px 8px 5px rgba(0,0,0,0.10);
+    -moz-box-shadow: 5px 6px 8px 5px rgba(0,0,0,0.10);
+    box-shadow: 5px 6px 8px 5px rgba(0,0,0,0.10);
+    border-radius: 7px;
+    margin: auto;
+    flex-direction: column;
+    margin: 15px;
+    transition-duration: 0.6s;
+
+    opacity: 0.95;
+    /*transform: scale(0.9);*/
+    transition: all 0.8s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.more_btn {
+    background-color: #B2BABB;
+    color: black;
+    width: 250px;
+    height: 50px;
+    -webkit-box-shadow: 5px 6px 8px 5px rgba(0,0,0,0.10);
+    -moz-box-shadow: 5px 6px 8px 5px rgba(0,0,0,0.10);
+    box-shadow: 5px 6px 8px 5px rgba(0,0,0,0.10);
+    border-radius: 7px;
+    margin: auto;
+    flex-direction: column;
+    margin: 15px;
+    transition-duration: 0.6s;
+    opacity: 0.95;
+    transition: all 0.8s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.more_btn:hover {
+    cursor: pointer;
+    background-color: white;
+    transition-duration: 0.8s;   
+}
+
+.dash_btn_active_d {
+    background-color: white;
+    color: black;
+}
+
+.dash_btn_active_d:hover {
+    background-color: white!important;
+    opacity: 0.85;
 }
 
 .dashboard_card, .dashboard_card_btn {
@@ -861,6 +1044,7 @@ main {
     display: none;
     transform: scale(0);
     transition-duration: 0.5s;
+    height: 100%;
 }
 
 .dashboard_card:hover {
@@ -868,6 +1052,50 @@ main {
     -moz-box-shadow: 5px 6px 10px 5px rgba(0,0,0,0.18);
     box-shadow: 5px 6px 10px 5px rgba(0,0,0,0.18);
     transition-duration: 0.7s;
+}
+
+.dashboard_card_pic {
+    height: 200px;
+    width: 100%;
+}
+.dc_pic {
+    display: flex;
+    height: 150px;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+}
+.dashboard_card_title {
+    font-size: 1.5em;
+    color: black;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    width: 100%;
+}
+
+.dashboard_card_body {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    font-size: 0.9em; 
+    margin-top: 0.2em;
+    padding: 50px;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    flex: 1;
+}
+
+.dashboard_card_body p {
+    font-size: 0.8em;
+    margin: 30px;
+    text-align: left;
 }
 
 /** Dashboard Activo**/
@@ -921,10 +1149,14 @@ main {
 }
 
 .section2 {
-    height: 100vh;
+    position: relative;
+    align-items: center;
+    margin: 0;
+    height: 100%;
     width: 100%;
     background-color: transparent;
     margin: auto;
+    flex-direction: column!important;
 }
 
 .card_block {
@@ -1064,12 +1296,6 @@ main {
     justify-content: center;
     margin: auto;
     line-height: 180px;
-/*    background: -moz-radial-gradient(circle, rgba(46,141,220,1) 0%, rgba(36,88,167,1) 66%);
-    background: -webkit-radial-gradient(circle, rgba(46,141,220,1) 0%, rgba(36,88,167,1) 66%);
-    background: radial-gradient(circle, rgba(46,141,220,1) 0%, rgba(36,88,167,1) 66%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2e8ddc",endColorstr="#2458a7",GradientType=1);
-
-    background-color: white;*/
     -webkit-box-shadow: 5px 6px 8px 5px rgba(0,0,0,0.10);
     -moz-box-shadow: 5px 6px 8px 5px rgba(0,0,0,0.10);
     box-shadow: 5px 6px 8px 5px rgba(0,0,0,0.10);
@@ -1172,8 +1398,17 @@ main {
     width: 30px;
 }
 
-.card_linkedin {
+.lin_res {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
 
+.lin_res p {
+    width: 100%;
+    margin: 15px;
+    text-align: justify;
 }
 
 .card_description {
@@ -1194,6 +1429,12 @@ main {
     transition-duration: 0.6s;
 }
 
+#naranja {
+    height: 300px;
+    width: auto;
+    align-items: center;
+}
+
 /** Footer **/
 .footer {
     position: relative;
@@ -1201,6 +1442,7 @@ main {
     width: 100%;  
     z-index: 10;
     bottom: 0;
+    margin-top: 15em;
 }
 
 .footer_wave {
@@ -1220,17 +1462,6 @@ main {
     text-align: center;
     color: white;
     z-index: 20;
-
-    /*
-    background: rgba(46,142,220,1);
-    background: -moz-linear-gradient(top, rgba(46,142,220,1) 11%, rgba(41,117,196,1) 37%, rgba(33,72,153,1) 84%, rgba(30,57,138,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(11%, rgba(46,142,220,1)), color-stop(37%, rgba(41,117,196,1)), color-stop(84%, rgba(33,72,153,1)), color-stop(100%, rgba(30,57,138,1)));
-    background: -webkit-linear-gradient(top, rgba(46,142,220,1) 11%, rgba(41,117,196,1) 37%, rgba(33,72,153,1) 84%, rgba(30,57,138,1) 100%);
-    background: -o-linear-gradient(top, rgba(46,142,220,1) 11%, rgba(41,117,196,1) 37%, rgba(33,72,153,1) 84%, rgba(30,57,138,1) 100%);
-    background: -ms-linear-gradient(top, rgba(46,142,220,1) 11%, rgba(41,117,196,1) 37%, rgba(33,72,153,1) 84%, rgba(30,57,138,1) 100%);
-    background: linear-gradient(to bottom, rgba(46,142,220,1) 11%, rgba(41,117,196,1) 37%, rgba(33,72,153,1) 84%, rgba(30,57,138,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e8edc', endColorstr='#1e398a', GradientType=0 );
-    */
     background-color: #2e8ddc;
 
 }
@@ -1240,4 +1471,13 @@ main {
     width: 100%;
     margin: 0;
     padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .lin_res {
+        flex-direction: column;
+    }
+    .lin_res p{
+        margin: 0;
+    }
 }

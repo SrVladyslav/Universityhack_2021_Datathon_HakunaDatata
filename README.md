@@ -12,6 +12,6 @@ Después de haber analizado los datasets dados, profundizado en la lectura de al
 
 >→ Los precios aumentaron durante la época de marzo 2020 -abril 2020, sin embargo el covid en un principio no ha afectado de forma negativa a la economía del mercado español. Si
 
-## Team
+## Equipo
 → [Lisa Gilyarovskaya](https://www.linkedin.com/in/lisagilyarovskaya/)<br>
 → [Vladyslav Mazurkevych](https://www.linkedin.com/in/vladyslav-mazurkevych/)

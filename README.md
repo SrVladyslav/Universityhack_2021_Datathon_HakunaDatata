@@ -11,3 +11,7 @@ Después de haber analizado los datasets dados, profundizado en la lectura de al
 >→ Los patrones de consumo, en general se han mantenido igual, la gente sigue comprando el mismo top5 de productos en volumenes parecidos los últimos tres años. Sin embargo, da para investigar la agrupación de observaciones en la gráfica que relacionaba el volumen de los productos en un año determinado con el consumo por cápita.
 
 >→ Los precios aumentaron durante la época de marzo 2020 -abril 2020, sin embargo el covid en un principio no ha afectado de forma negativa a la economía del mercado español. Si
+
+## Team
+→ [Lisa Gilyarovskaya](https://www.linkedin.com/in/lisagilyarovskaya/)<br>
+→ [Vladyslav Mazurkevych](https://www.linkedin.com/in/vladyslav-mazurkevych/)
